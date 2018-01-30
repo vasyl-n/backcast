@@ -11,7 +11,7 @@ var AppView = Backbone.View.extend({
   render: function() {
     // debugger
     this.$el.html(this.template());
-    this.$el.append(this.list.render());
+    this.$el.find('.list').html(this.list.render());
     // return this.$el
   },
 
