@@ -1,12 +1,11 @@
 var VideoListView = Backbone.View.extend({
 
   initialize: function() {
-    this.on('change', this.render, this);
-    // this.render();
+    this.on('change', function(){this.render();}, this);
+    // this.listenTo('change', this.render())
   },
 
   render: function() {
-    // debugger
     this.$el.children().detach();
     this.$el.html(this.template());
     // // debugger
@@ -17,7 +16,6 @@ var VideoListView = Backbone.View.extend({
   },
 
   renderVideo: function(video) {
-    // debugger
     var videoListEntry = new VideoListEntryView({model: video});
     return videoListEntry.render();
   },
