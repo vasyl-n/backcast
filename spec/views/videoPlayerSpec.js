@@ -24,5 +24,4 @@ describe ('VideoPlayerView', function() {
     collection.at(0).select();
     expect(view.render).to.have.been.called;
   });
-
 });
