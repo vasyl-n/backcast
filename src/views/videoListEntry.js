@@ -5,6 +5,7 @@ var VideoListEntryView = Backbone.View.extend({
   },
 
   select: function(){
+    // debugger
     this.model.select();
   },
 
